@@ -14,36 +14,37 @@
         android:layout_margin="15dp"
         tools:ignore="MissingConstraints">
 
-
         <TextView
             android:id="@+id/title"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:textSize="24dp"
-            android:hint="Who is faster?">
+            android:hint="Math Quiz!">
         </TextView>
 
-        <Spinner
-            android:id="@+id/dogList"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" />
-
-        <Spinner
-            android:id="@+id/vehicleList"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" />
-
-        <Button
-            android:id="@+id/checkButton"
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check"
+            android:textSize="24dp"
+            android:id="@+id/numberBox">
+        </EditText>
+
+        <Button
+            android:id="@+id/factorialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Factorial"
             android:textSize="24dp">
         </Button>
+
+        <Button
+            android:id="@+id/squareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square"
+            android:textSize="24dp">
+        </Button>
+
 
         <TextView
             android:id="@+id/result"

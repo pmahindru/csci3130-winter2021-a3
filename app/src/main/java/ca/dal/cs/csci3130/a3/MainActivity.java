@@ -1,12 +1,11 @@
 package ca.dal.cs.csci3130.a3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import java.util.ArrayList;
-import java.util.List;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,29 +14,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.addDogList();
-        this.addVehicleList();
+        Button factorialButton = findViewById(R.id.factorialButton);
+        factorialButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                EditText numberBox = findViewById(R.id.numberBox);
+                int number = Integer.parseInt(numberBox.getText().toString());
+                int factorial = calculateFactorial(number);
+                TextView statusLabel = findViewById(R.id.result);
+                statusLabel.setText(String.valueOf(factorial));
+            }
+        });
+
+        Button squareButton = findViewById(R.id.squareButton);
+        squareButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                EditText numberBox = findViewById(R.id.numberBox);
+                int number = Integer.parseInt(numberBox.getText().toString());
+                int square = calculateSquare(number);
+                TextView statusLabel = findViewById(R.id.result);
+                statusLabel.setText(String.valueOf(square));
+            }
+        });
     }
 
-
-    protected void addDogList() {
-        Spinner dogList = (Spinner) findViewById(R.id.dogList);
-        List<String> dogs = new ArrayList<String>();
-        dogs.add("HUSKY");
-        dogs.add("DALMATIAN");
-        dogs.add("BULLDOG");
-        @SuppressLint("ResourceType") ArrayAdapter<String> dogListAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, dogs);
-        dogListAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        dogList.setAdapter(dogListAdapter);
+    protected int calculateFactorial(int number) {
+        int factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+        return factorial;
     }
 
-    protected void addVehicleList() {
-        Spinner vehicleList = (Spinner) findViewById(R.id.vehicleList);
-        List<String> vehicles = new ArrayList<String>();
-        vehicles.add("BUS");
-        vehicles.add("TRUCK");
-        @SuppressLint("ResourceType") ArrayAdapter<String> vehicleListAdapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, vehicles);
-        vehicleListAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        vehicleList.setAdapter(vehicleListAdapter);
+    protected int calculateSquare(int number) {
+        return number * number;
     }
+
 }

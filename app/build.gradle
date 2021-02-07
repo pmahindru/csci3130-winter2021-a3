@@ -30,4 +30,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    /*Mockito*/
+    testImplementation "org.mockito:mockito-inline:3.4.0"
+
+
 }
