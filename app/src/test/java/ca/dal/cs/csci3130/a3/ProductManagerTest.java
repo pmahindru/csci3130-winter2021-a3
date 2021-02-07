@@ -31,34 +31,35 @@ public class ProductManagerTest {
     @Test
     public void testProductPrice() {
         Product product = manager.deliverAProduct();
-        assertEquals(20, product.getPrice());
+        assertEquals(1, product.getPrice());
 
         Vegetable vegetable = (Vegetable) manager.deliverAProduct();
-        assertEquals(20, vegetable.getPrice());
+        assertEquals(5, vegetable.getPrice());
 
         Clothes clothes = (Clothes) manager.deliverAProduct();
         assertEquals(20, clothes.getPrice());
     }
 
-    @Test
-    public void testProductWeight() {
-        manager.deliverAProduct();
-        Vegetable vegetable = (Vegetable) manager.deliverAProduct();
-        assertEquals(1, vegetable.getWeight());
 
-        Clothes clothes = (Clothes) manager.deliverAProduct();
-        assertEquals(0, clothes.getWeight());
-    }
 
     @Test
     public void testFarmProduct() {
         manager.deliverAProduct();
         Vegetable vegetable = (Vegetable) manager.deliverAProduct();
-        assertTrue(vegetable.isFarmProduct());
+        assertTrue(vegetable.isProducedInAFarm());
 
         Clothes clothes = (Clothes) manager.deliverAProduct();
-        assertFalse(clothes.isFarmProduct());
+        assertFalse(clothes.isProducedInAFarm());
     }
 
+    @Test
+    public void testFactoryProduct() {
+        manager.deliverAProduct();
+        Vegetable vegetable = (Vegetable) manager.deliverAProduct();
+        assertFalse(vegetable.isProducedInAFactory());
+
+        Clothes clothes = (Clothes) manager.deliverAProduct();
+        assertTrue(clothes.isProducedInAFactory());
+    }
 
 }
