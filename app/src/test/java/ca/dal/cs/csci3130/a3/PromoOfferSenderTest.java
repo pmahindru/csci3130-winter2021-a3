@@ -1,13 +1,12 @@
 package ca.dal.cs.csci3130.a3;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import java.util.Date;
-import ca.dal.cs.csci3130.a3.q2.IPromoOffer;
-import ca.dal.cs.csci3130.a3.q2.PromoOfferSender;
+
+import ca.dal.cs.csci3130.a3.q1.IPromoOffer;
+import ca.dal.cs.csci3130.a3.q1.PromoOfferSender;
 import static org.junit.Assert.assertEquals;
 
 

@@ -7,15 +7,15 @@ public class Product {
     }
 
     public boolean isPerishable() {
-        return true;
+        return false;
     }
 
     public boolean isProducedInAFarm() {
-        return true;
+        return false;
     }
 
     public boolean isProducedInAFactory() {
-        return true;
+        return false;
     }
 
 }

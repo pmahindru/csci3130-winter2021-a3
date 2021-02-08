@@ -1,6 +1,4 @@
-package ca.dal.cs.csci3130.a3.q2;
-
-import java.util.Date;
+package ca.dal.cs.csci3130.a3.q1;
 
 public interface IPromoOffer {
 

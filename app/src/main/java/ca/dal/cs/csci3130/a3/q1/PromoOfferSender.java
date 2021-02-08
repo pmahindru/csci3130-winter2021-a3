@@ -1,6 +1,5 @@
-package ca.dal.cs.csci3130.a3.q2;
+package ca.dal.cs.csci3130.a3.q1;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 

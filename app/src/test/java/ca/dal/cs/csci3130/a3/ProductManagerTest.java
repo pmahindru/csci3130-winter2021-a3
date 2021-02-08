@@ -24,8 +24,6 @@ public class ProductManagerTest {
         manager.deliverAProduct();
         Vegetable vegetable = (Vegetable) manager.deliverAProduct();
         assertTrue(vegetable.isPerishable());
-        Clothes clothes = (Clothes) manager.deliverAProduct();
-        assertFalse(clothes.isPerishable());
     }
 
     @Test
@@ -40,24 +38,17 @@ public class ProductManagerTest {
         assertEquals(20, clothes.getPrice());
     }
 
-
-
     @Test
     public void testFarmProduct() {
         manager.deliverAProduct();
         Vegetable vegetable = (Vegetable) manager.deliverAProduct();
         assertTrue(vegetable.isProducedInAFarm());
-
-        Clothes clothes = (Clothes) manager.deliverAProduct();
-        assertFalse(clothes.isProducedInAFarm());
     }
 
     @Test
     public void testFactoryProduct() {
         manager.deliverAProduct();
         Vegetable vegetable = (Vegetable) manager.deliverAProduct();
-        assertFalse(vegetable.isProducedInAFactory());
-
         Clothes clothes = (Clothes) manager.deliverAProduct();
         assertTrue(clothes.isProducedInAFactory());
     }

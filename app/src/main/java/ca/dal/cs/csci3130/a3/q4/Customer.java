@@ -1,4 +1,4 @@
-package ca.dal.cs.csci3130.a3.q5;
+package ca.dal.cs.csci3130.a3.q4;
 
 public class Customer {
 

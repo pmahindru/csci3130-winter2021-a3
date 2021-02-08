@@ -1,8 +1,8 @@
 package ca.dal.cs.csci3130.a3;
 
 import org.junit.Test;
-import ca.dal.cs.csci3130.a3.q5.Customer;
-import ca.dal.cs.csci3130.a3.q5.PhoneNumber;
+import ca.dal.cs.csci3130.a3.q4.Customer;
+import ca.dal.cs.csci3130.a3.q4.PhoneNumber;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
