@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import ca.dal.cs.csci3130.a3.q1.IPromoOffer;
 import ca.dal.cs.csci3130.a3.q1.PromoOfferSender;
 import static org.junit.Assert.assertEquals;
