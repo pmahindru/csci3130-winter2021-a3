@@ -1,7 +1,5 @@
 package ca.dal.cs.csci3130.a3;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;

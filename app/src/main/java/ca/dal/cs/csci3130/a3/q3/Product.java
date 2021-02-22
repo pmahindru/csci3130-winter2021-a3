@@ -6,16 +6,4 @@ public class Product {
         return 1;
     }
 
-    public boolean isPerishable() {
-        return false;
-    }
-
-    public boolean isProducedInAFarm() {
-        return false;
-    }
-
-    public boolean isProducedInAFactory() {
-        return false;
-    }
-
 }

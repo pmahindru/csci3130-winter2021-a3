@@ -67,3 +67,34 @@ public class AppUser {
     }
 
 }
+
+
+//class buyer extends AppUser{
+//    public buyer(String userType) {
+//        super(userType);
+//    }
+//
+//    AccessLevel getUserRole(){
+//        return getBuyerAccessLevel();
+//    }
+//}
+//
+//class seller extends AppUser{
+//    public seller(String userType) {
+//        super(userType);
+//    }
+//
+//    AccessLevel getUserRole(){
+//        return  getSellerAccessLevel();
+//    }
+//}
+//
+//class admin extends AppUser{
+//    public admin(String userType) {
+//        super(userType);
+//    }
+//
+//    AccessLevel getUserRole(){
+//        return getAdminAccessLevel();
+//    }
+//}
