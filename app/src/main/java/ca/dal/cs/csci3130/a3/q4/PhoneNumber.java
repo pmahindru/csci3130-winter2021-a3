@@ -1,22 +1,32 @@
 package ca.dal.cs.csci3130.a3.q4;
 
 public class PhoneNumber {
-    String unformattedNumber;
+    private final String unformattedNumber;
 
     public PhoneNumber(String unformattedNumber) {
         this.unformattedNumber = unformattedNumber;
     }
 
+    private String getString(int x, int y) {
+        return this.unformattedNumber.substring(x, y);
+    }
+
     protected String getAreaCode() {
-        return this.unformattedNumber.substring(0, 3);
+        return getString(0, 3);
     }
 
     protected String getPrefix() {
-        return this.unformattedNumber.substring(3, 6);
+        return getString(3, 6);
     }
 
     protected String getNumber() {
-        return this.unformattedNumber.substring(6, 10);
+        return getString(6, 10);
     }
 
+    protected String getFormattedPhoneNumber() {
+        String formattedNumber = "";
+        formattedNumber = getAreaCode() + "-" + getPrefix() +
+                "-" + getNumber();
+        return formattedNumber;
+    }
 }

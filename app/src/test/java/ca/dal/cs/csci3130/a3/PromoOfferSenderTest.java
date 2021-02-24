@@ -1,5 +1,8 @@
 package ca.dal.cs.csci3130.a3;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -14,13 +17,16 @@ public class PromoOfferSenderTest {
 
     static IPromoOffer offer = null;
 
-
-    @Test
-    public void testSendOffer() {
+    @Before
+    public void setup(){
         offer = Mockito.mock(IPromoOffer.class);
         Mockito.when(offer.getOffer()).thenReturn("This is a cool offer!");
         Mockito.when(offer.getExpiredDate()).thenReturn("2021-03-31");
+    }
 
+
+    @Test
+    public void testSendOffer() {
         PromoOfferSender sender = new PromoOfferSender();
         sender.sendOffer(offer);
         assertEquals("This is a cool offer!", offer.getOffer());

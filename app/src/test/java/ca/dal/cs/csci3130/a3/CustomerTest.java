@@ -11,10 +11,10 @@ public class CustomerTest {
     @Test
     public void testCustomerName() {
         Customer firstCustomer = new Customer("John", "Doe");
-        assertEquals("John Doe", firstCustomer.getFullName());
+        assertEquals("John Doe", firstCustomer.getFullName(firstCustomer));
 
         Customer secondCustomer = new Customer("Jane", "Doe");
-        assertEquals("Jane Doe", secondCustomer.getFullName());
+        assertEquals("Jane Doe", secondCustomer.getFullName(secondCustomer));
     }
 
     @Test

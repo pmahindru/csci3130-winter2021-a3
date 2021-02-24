@@ -13,17 +13,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mathCal();
+    }
 
+    private int getNumber() {
+        EditText numberBox = findViewById(R.id.numberBox);
+        return Integer.parseInt(numberBox.getText().toString());
+    }
+
+    private void mathCal() {
         Button factorialButton = findViewById(R.id.factorialButton);
         factorialButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                EditText numberBox = findViewById(R.id.numberBox);
-                int number = Integer.parseInt(numberBox.getText().toString());
-                int factorial = calculateFactorial(number);
-                TextView statusLabel = findViewById(R.id.result);
-                statusLabel.setText(String.valueOf(factorial));
+                resultFactorial();
             }
         });
 
@@ -32,13 +36,23 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                EditText numberBox = findViewById(R.id.numberBox);
-                int number = Integer.parseInt(numberBox.getText().toString());
-                int square = calculateSquare(number);
-                TextView statusLabel = findViewById(R.id.result);
-                statusLabel.setText(String.valueOf(square));
+                resultSquare();
             }
         });
+    }
+
+    private void resultSquare() {
+        int number = getNumber();
+        int square = calculateSquare(number);
+        TextView statusLabel = findViewById(R.id.result);
+        statusLabel.setText(String.valueOf(square));
+    }
+
+    private void resultFactorial() {
+        int number = getNumber();
+        int factorial = calculateFactorial(number);
+        TextView statusLabel = findViewById(R.id.result);
+        statusLabel.setText(String.valueOf(factorial));
     }
 
     protected int calculateFactorial(int number) {

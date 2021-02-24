@@ -15,14 +15,11 @@ public class Customer {
         this.unformattedNumber = unformattedNumber;
     }
 
-    public String getFullName() {
-        return this.firstName + " " + this.lastName;
+    public String getFormattedPhoneNumber() {
+        return unformattedNumber.getFormattedPhoneNumber();
     }
 
-    public String getFormattedPhoneNumber() {
-        String formattedNumber = new String();
-        formattedNumber = this.unformattedNumber.getAreaCode() + "-" + this.unformattedNumber.getPrefix() +
-                "-" + this.unformattedNumber.getNumber();
-        return formattedNumber;
+    public String getFullName(Customer customer) {
+        return customer.firstName + " " + customer.lastName;
     }
 }

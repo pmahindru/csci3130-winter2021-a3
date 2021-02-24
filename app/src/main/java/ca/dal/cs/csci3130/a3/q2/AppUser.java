@@ -9,9 +9,11 @@ public class AppUser {
 
     public AppUser(String userType) {
         this.userType = userType;
+
     }
 
-    public AccessLevel getUserRole() {
+    public AccessLevel getUserRole()
+    {
         AccessLevel userAccessLevel = null;
         switch (this.userType) {
             case "buyer":
@@ -29,15 +31,15 @@ public class AppUser {
         return userAccessLevel;
     }
 
-    private AccessLevel getBuyerAccessLevel() {
+    public AccessLevel getBuyerAccessLevel() {
         return buyerAccessLevel;
     }
 
-    private AccessLevel getSellerAccessLevel() {
+    public AccessLevel getSellerAccessLevel() {
         return sellerAccessLevel;
     }
 
-    private AccessLevel getAdminAccessLevel() {
+    public AccessLevel getAdminAccessLevel() {
         return adminAccessLevel;
     }
 
@@ -65,9 +67,7 @@ public class AppUser {
         }
         return false;
     }
-
 }
-
 
 //class buyer extends AppUser{
 //    public buyer(String userType) {
