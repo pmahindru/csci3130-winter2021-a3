@@ -37,5 +37,4 @@ public class ExampleInstrumentedTest {
         onView(withId(R.id.squareButton)).perform(click());
         onView(withId(R.id.result)).check(matches(withText("64")));
     }
-
 }
