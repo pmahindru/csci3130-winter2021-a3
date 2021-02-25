@@ -24,7 +24,6 @@ public class PromoOfferSenderTest {
         Mockito.when(offer.getExpiredDate()).thenReturn("2021-03-31");
     }
 
-
     @Test
     public void testSendOffer() {
         PromoOfferSender sender = new PromoOfferSender();
